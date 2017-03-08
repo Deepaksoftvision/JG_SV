@@ -9,13 +9,29 @@
 		<parameter name="browser" value="Firefox"></parameter>
 		<parameter name="url" value="https://www.google.co.in/"></parameter>
 		<classes>
-			<class name="tests.Test1" />
+			<class name="tests.Test1"/>
 		</classes>
 	</test> <!-- Test -->
 
 
 	<test name="Test2">
 		<parameter name="browser" value="Chrome"></parameter>
+		<parameter name="url" value="https://www.google.co.in/"></parameter>
+		<classes>
+			<class name="tests.Test1" />
+		</classes>
+	</test> <!-- Test -->
+	
+		<test name="Test3">
+		<parameter name="browser" value="ie"></parameter>
+		<parameter name="url" value="https://www.google.co.in/"></parameter>
+		<classes>
+			<class name="tests.Test1" />
+		</classes>
+	</test> <!-- Test -->
+	
+		<test name="Test4">
+		<parameter name="browser" value="edge"></parameter>
 		<parameter name="url" value="https://www.google.co.in/"></parameter>
 		<classes>
 			<class name="tests.Test1" />

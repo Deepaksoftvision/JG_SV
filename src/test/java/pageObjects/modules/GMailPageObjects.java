@@ -5,10 +5,10 @@ package pageObjects.modules;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 import pageObjects.initializePageObjects.PageFactoryInitializer;
 import ru.yandex.qatools.allure.annotations.Step;
-import utils.RandomGenerator;
 
 /**
  * @author Gladson Antony
@@ -24,11 +24,19 @@ public class GMailPageObjects extends PageFactoryInitializer
 	private WebElement nextButton;
 
 	@Step("To Enter Email ID and Click Next Button")
-	public void enterEmailID() 
+	public GMailPageObjects enterEmailID(String emailID) 
 	{
 		utils.FluentWaiting.waitUntillElementToBeClickable(30, 500, emailIDTextBox);
-		emailIDTextBox.sendKeys(RandomGenerator.GenerateRandomEMAILIDs("google.com"));	
+		emailIDTextBox.sendKeys(emailID);	
 		nextButton.click();
+		return this;
+	}
+
+	@Step("Verify the Page Title of the GMail Page")
+	public GMailPageObjects verifyPageTitle() throws Exception 
+	{
+		Assert.assertEquals(getWebDriver().getTitle(), "gagagasgasg");
+		return this;
 	}
 	
 	

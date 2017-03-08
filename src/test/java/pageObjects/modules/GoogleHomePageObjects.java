@@ -32,12 +32,14 @@ public class GoogleHomePageObjects extends PageFactoryInitializer
 		return this;		
 	}
 
+	@Step("Enter text into the Search Box")
 	public GoogleHomePageObjects enterTextToSearchBox() 
 	{
 		SearchBox.sendKeys(RandomGenerator.GenerateRandomEMAILIDs("google.com"));
 		return this;	
 	}
 
+	@Step("Verify the Page Title of the Google Home Page")
 	public GoogleHomePageObjects verifyPageTitle() throws Exception 
 	{
 		FluentWaiting.waitForTitleToBe(5, 500, "Google");

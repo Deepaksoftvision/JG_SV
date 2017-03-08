@@ -20,9 +20,9 @@ public class BrowserFactory extends InitMethod
 	{
 		WebDriver driver;
 		
-		switch(browser)
+		switch(browser.toLowerCase())
 		{
-		case "Chrome":
+		case "chrome":
 			System.setProperty("webdriver.chrome.driver", "src/main/resources/Drivers/chromedriver.exe");
 			driver = new ChromeDriver();
 			driver.manage().deleteAllCookies();
@@ -31,7 +31,7 @@ public class BrowserFactory extends InitMethod
 			driver.get(url);
 			break;
 		
-		case  "Firefox":
+		case  "firefox":
 			System.setProperty("webdriver.gecko.driver", "src/main/resources/Drivers/geckodriver.exe");
 			driver = new FirefoxDriver();
 			driver.manage().deleteAllCookies();
@@ -40,7 +40,7 @@ public class BrowserFactory extends InitMethod
 			driver.get(url);
 			break;
 		
-		case  "IE":
+		case  "ie":
 			System.setProperty("webdriver.ie.driver", "src/main/resources/Drivers/IEDriverServer.exe");
 			driver = new InternetExplorerDriver();
 			driver.manage().deleteAllCookies();
@@ -49,7 +49,7 @@ public class BrowserFactory extends InitMethod
 			driver.get(url);
 			break;	
 			
-		case  "Edge":
+		case  "edge":
 			System.setProperty("webdriver.edge.driver", "src/main/resources/Drivers/MicrosoftWebDriver.exe");
 			driver = new EdgeDriver();
 			driver.manage().deleteAllCookies();
@@ -58,7 +58,7 @@ public class BrowserFactory extends InitMethod
 			driver.get(url);
 			break;
 			
-		case  "Unit":
+		case  "unit":
 			driver = new HtmlUnitDriver();
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
