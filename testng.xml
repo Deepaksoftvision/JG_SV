@@ -1,40 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite" parallel="tests">
+<suite name="Suite" thread-count="5" parallel="tests"
+	data-provider-thread-count="5">
 	<listeners>
 		<listener class-name="listeners.AllureListener"></listener>
 	</listeners>
 
-	<test name="Test">
-		<parameter name="browser" value="Firefox"></parameter>
-		<parameter name="url" value="https://www.google.co.in/"></parameter>
-		<classes>
-			<class name="tests.Test1"/>
-		</classes>
-	</test> <!-- Test -->
-
-
-	<test name="Test2">
+	<test name="Test Google Chrome">
 		<parameter name="browser" value="Chrome"></parameter>
-		<parameter name="url" value="https://www.google.co.in/"></parameter>
+		<parameter name="url" value="http://test.dotti.co.nz/shop/en/dottinz"></parameter>
 		<classes>
-			<class name="tests.Test1" />
+			<class name="tests.LoginPageTests">
+				<methods>
+					<include name="loginTest_Positive"></include>
+				</methods>
+			</class>
 		</classes>
 	</test> <!-- Test -->
 	
-		<test name="Test3">
+	<test name="Test Internet Explorer">
 		<parameter name="browser" value="ie"></parameter>
-		<parameter name="url" value="https://www.google.co.in/"></parameter>
+		<parameter name="url" value="http://test.dotti.co.nz/shop/en/dottinz"></parameter>
 		<classes>
-			<class name="tests.Test1" />
+			<class name="tests.LoginPageTests">
+				<methods>
+					<include name="loginTest_Positive"></include>
+				</methods>
+			</class>
 		</classes>
 	</test> <!-- Test -->
-	
-		<test name="Test4">
-		<parameter name="browser" value="edge"></parameter>
-		<parameter name="url" value="https://www.google.co.in/"></parameter>
-		<classes>
-			<class name="tests.Test1" />
-		</classes>
-	</test> <!-- Test -->
+
 </suite> <!-- Suite -->
