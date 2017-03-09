@@ -18,7 +18,7 @@
 		</classes>
 	</test> <!-- Test -->
 	
-	<test name="Test Internet Explorer">
+	<test name="Test Internet Explorer2">
 		<parameter name="browser" value="ie"></parameter>
 		<parameter name="url" value="http://test.dotti.co.nz/shop/en/dottinz"></parameter>
 		<classes>
