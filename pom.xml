@@ -12,8 +12,8 @@
 		<compiler.version>1.8</compiler.version>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-		<selenium.version>3.0.1</selenium.version>
-		<allure.version>1.5.0</allure.version>
+		<selenium.version>3.3.0</selenium.version>
+		<allure.version>1.5.2</allure.version>
 		<aspectj.version>1.8.10</aspectj.version>
 		<apachepoi.version>3.13</apachepoi.version>
 	</properties>
@@ -25,7 +25,7 @@
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>6.9.10</version>
+			<version>6.11</version>
 			<scope>test</scope>
 		</dependency>
 
