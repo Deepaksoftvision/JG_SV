@@ -180,13 +180,6 @@
 		</dependency>
 		
 		<!-- https://mvnrepository.com/artifact/org.jenkins-ci.plugins/plugin -->
-<dependency>
-    <groupId>org.jenkins-ci.plugins</groupId>
-    <artifactId>plugin</artifactId>
-    <version>2.23</version>
-</dependency>
-
-		
 <!-- https://mvnrepository.com/artifact/org.jenkins-ci.plugins/script-security -->
 <dependency>
     <groupId>org.jenkins-ci.plugins</groupId>
