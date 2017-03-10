@@ -264,23 +264,10 @@
 		<plugins>
 			<!-- Apache Maven SureFire Plugin -->
 			<plugin>
-				<!-- <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-surefire-plugin</artifactId> 
-					<version>2.19.1</version> <configuration> <testFailureIgnore>true</testFailureIgnore> 
-					<argLine> -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar" 
-					</argLine> <properties> <property> <name>listener</name> <value>listeners.AllureListener</value> 
-					</property> </properties> </configuration> Aspect J Weaver Dependency <dependencies> 
-					<dependency> <groupId>org.aspectj</groupId> <artifactId>aspectjweaver</artifactId> 
-					<version>${aspectj.version}</version> </dependency> </dependencies> -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.19.1</version>
 				<configuration>
-					<properties>
-						<property>
-							<name>listener</name>
-							<value>listeners.AllureListener</value>
-						</property>
-					</properties>
 					<suiteXmlFiles>
 						<suiteXmlFile>testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
