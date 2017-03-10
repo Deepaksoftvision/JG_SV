@@ -178,30 +178,6 @@
 			<artifactId>aspectjrt</artifactId>
 			<version>${aspectj.version}</version>
 		</dependency>
-		
-		<!-- https://mvnrepository.com/artifact/org.jenkins-ci.plugins/plugin -->
-<!-- https://mvnrepository.com/artifact/org.jenkins-ci.plugins/script-security -->
-<dependency>
-    <groupId>org.jenkins-ci.plugins</groupId>
-    <artifactId>script-security</artifactId>
-    <version>1.27</version>
-</dependency>
-
-		
-<!-- https://mvnrepository.com/artifact/org.jenkins-ci.plugins.workflow/workflow-durable-task-step -->
-<dependency>
-    <groupId>org.jenkins-ci.plugins.workflow</groupId>
-    <artifactId>workflow-durable-task-step</artifactId>
-    <version>2.9</version>
-</dependency>
-
-<!-- https://mvnrepository.com/artifact/org.jenkins-ci.plugins.workflow/workflow-basic-steps -->
-<dependency>
-    <groupId>org.jenkins-ci.plugins.workflow</groupId>
-    <artifactId>workflow-basic-steps</artifactId>
-    <version>2.4</version>
-</dependency>
-
 	</dependencies>
 
 	<profiles>
