@@ -6,7 +6,7 @@
 		<listener class-name="listeners.AllureListener"></listener>
 	</listeners>
 
-	<test name="Test Google Chrome">
+	<test name="Google Chrome">
 		<parameter name="browser" value="Chrome"></parameter>
 		<parameter name="url" value="http://test.dotti.co.nz/shop/en/dottinz"></parameter>
 		<classes>
@@ -17,5 +17,9 @@
 			</class>
 		</classes>
 	</test> <!-- Test -->
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> 09d13aec3cbce7182faa75cde4afd1b4c690ae28
 </suite> <!-- Suite -->
