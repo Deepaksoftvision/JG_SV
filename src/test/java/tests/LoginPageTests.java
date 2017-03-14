@@ -50,6 +50,6 @@ public class LoginPageTests extends PageFactoryInitializer {
 		.enterUserName(userName)
 		.enterPassword(password)
 		.clickOnSubmitButton()
-		.verifyLoginSuccessMessage();		
+		.verifyLoginErrorsMessage(errorMessage);		
 	}
 }

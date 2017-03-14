@@ -30,6 +30,15 @@ public class DottiLoginPageObjects extends PageFactoryInitializer
 	@FindBy(xpath="//h1")
 	private WebElement accountHomeLocator;
 	
+	@FindBy(id="errordo-login-email")
+	private WebElement usernameErrorMessageLocator;
+	
+	@FindBy(id="errordo-login-password")
+	private WebElement passwordErrorMessageLocator;
+	
+	@FindBy(id="do-error")
+	private WebElement errorHeaderLocator;
+	
 	
 	@Step("To Verify the Page Title of the Login Page")
 	public DottiLoginPageObjects verifyPageTitle() 
@@ -77,6 +86,33 @@ public class DottiLoginPageObjects extends PageFactoryInitializer
 	{
 		Thread.sleep(5000);
 		Assert.assertEquals(getWebDriver().getTitle().trim(), "My Account • Dotti");
+		return this;
+	}
+
+
+	@Step("To Verify the Error Message: '{0}'")
+	public DottiLoginPageObjects verifyLoginErrorsMessage(String errorMessage)
+	{
+		String actualText="";
+		String emailErrorMessage="";
+		String passwordErrorMessage="";
+		
+		try
+		{
+			emailErrorMessage = usernameErrorMessageLocator.getText().trim();
+		}
+		catch(Exception e)
+		{ }
+		
+		try
+		{
+			passwordErrorMessage = passwordErrorMessageLocator.getText().trim();
+		}
+		catch(Exception e)
+		{ }
+		
+		actualText = emailErrorMessage + passwordErrorMessage;
+		Assert.assertEquals(actualText, errorMessage);
 		return this;
 	}
 
