@@ -43,7 +43,7 @@ public class DottiLoginPageObjects extends PageFactoryInitializer
 	@Step("To Verify the Page Title of the Login Page")
 	public DottiLoginPageObjects verifyPageTitle() 
 	{
-		FluentWaiting.waitForTitleToBe(30, 100, "Login • Dotti");
+		FluentWaiting.waitForTitleToBe(30, 100, "Login â€¢ Dotti");
 		return this;
 	}
 	
@@ -85,12 +85,12 @@ public class DottiLoginPageObjects extends PageFactoryInitializer
 	public DottiLoginPageObjects verifyPageTitleAfterLogin() throws Exception 
 	{
 		Thread.sleep(5000);
-		Assert.assertEquals(getWebDriver().getTitle().trim(), "My Account • Dotti");
+		Assert.assertEquals(getWebDriver().getTitle().trim(), "My Account â€¢ Dotti");
 		return this;
 	}
 
 
-	@Step("To Verify the Error Message: '{0}'")
+	@Step("Verify the Error Message: {0}")
 	public DottiLoginPageObjects verifyLoginErrorsMessage(String errorMessage)
 	{
 		String actualText="";
