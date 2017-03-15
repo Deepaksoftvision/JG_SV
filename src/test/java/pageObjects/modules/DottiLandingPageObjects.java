@@ -19,6 +19,14 @@ public class DottiLandingPageObjects extends PageFactoryInitializer
 	
 	@FindBy(className="do-login")
 	private WebElement loginButtonLocator;
+	
+	@FindBy(xpath="//ul[@id='do-menu']/descendant::a[contains(text(),'New Arrivals')]")
+	private WebElement menu_NewArrivals;
+	
+	
+	@FindBy(id="WC_CachedHeaderDisplay_links_1_1__1")
+	private WebElement subMenu_NewClothing;
+		
 
 	@Step("To Click on Login Button")
 	public DottiLandingPageObjects clickOnLoginButton() 
@@ -28,4 +36,21 @@ public class DottiLandingPageObjects extends PageFactoryInitializer
 		return this;
 	}
 
+	@Step("Mouse Hover on New Arrivals")
+	public DottiLandingPageObjects mouseHoverOnNewArrivals() 
+	{
+		FluentWaiting.waitUntillElementToBeVisible(30, 500, menu_NewArrivals);
+		mousehover(menu_NewArrivals);
+		return this;
+	}
+
+	@Step("Mouse Hover on New Arrivals")
+	public DottiLandingPageObjects clickOnNewClothing() 
+	{
+		FluentWaiting.waitUntillElementToBeClickable(30, 500, subMenu_NewClothing);
+		subMenu_NewClothing.click();
+		return this;
+	}
+	
+	
 }

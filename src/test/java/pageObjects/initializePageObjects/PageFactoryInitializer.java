@@ -8,6 +8,10 @@ import org.openqa.selenium.support.PageFactory;
 import controllers.BaseMethod;
 import pageObjects.modules.DottiLandingPageObjects;
 import pageObjects.modules.DottiLoginPageObjects;
+import pageObjects.modules.ProductInformationPageObjects;
+import pageObjects.modules.ProductListPageObjects;
+import pageObjects.modules.SecuredPaymentPageObject;
+import pageObjects.modules.ShoppingBagPageObjects;
 
 /**
  * @author ${Gladson Antony}
@@ -25,4 +29,18 @@ public class PageFactoryInitializer extends BaseMethod
 		return PageFactory.initElements(getWebDriver(), DottiLoginPageObjects.class);
 	}
 
+	public ProductListPageObjects productListPage() {
+		return PageFactory.initElements(getWebDriver(), ProductListPageObjects.class);
+	}
+	
+	public ProductInformationPageObjects productInformationPage(){
+		return PageFactory.initElements(getWebDriver(), ProductInformationPageObjects.class);
+	}
+	
+	public ShoppingBagPageObjects shoppingBagPage(){
+		return PageFactory.initElements(getWebDriver(), ShoppingBagPageObjects.class);
+	}
+	public SecuredPaymentPageObject securedPaymentPage(){
+		return PageFactory.initElements(getWebDriver(), SecuredPaymentPageObject.class);
+	}
 }
