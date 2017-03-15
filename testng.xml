@@ -7,7 +7,7 @@
 	</listeners>
 
 	<test name="Google Chrome">
-		<parameter name="browser" value="Chrome"></parameter>
+		<parameter name="browser" value="Edge"></parameter>
 		<parameter name="url" value="http://test.dotti.co.nz/shop/en/dottinz"></parameter>
 		<classes>
 			<class name="tests.ChekoutTest">

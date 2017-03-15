@@ -17,41 +17,41 @@ import utils.FluentWaiting;
  */
 public class DottiLoginPageObjects extends PageFactoryInitializer
 {
-	
+
 	@FindBy(id="do-login-email")
 	private WebElement userNameLocator;
-	
+
 	@FindBy(id="do-login-password")
 	private WebElement passwordLocator;
-	
+
 	@FindBy(id="do-login-submit")
 	private WebElement loginButtonLocator;
-	
+
 	@FindBy(xpath="//h1")
 	private WebElement accountHomeLocator;
-	
+
 	@FindBy(id="errordo-login-email")
 	private WebElement usernameErrorMessageLocator;
-	
+
 	@FindBy(id="errordo-login-password")
 	private WebElement passwordErrorMessageLocator;
-	
+
 	@FindBy(id="do-error")
 	private WebElement errorHeaderLocator;
-	
-	
-	
 
-	
-	
+
+
+
+
+
 	@Step("To Verify the Page Title of the Login Page")
 	public DottiLoginPageObjects verifyPageTitle() 
 	{
 		FluentWaiting.waitForTitleToBe(30, 100, "Login • Dotti");
 		return this;
 	}
-	
-	
+
+
 	@Step("Enter Username {0}")
 	public DottiLoginPageObjects enterUserName(String UserName) throws Exception 
 	{
@@ -100,21 +100,21 @@ public class DottiLoginPageObjects extends PageFactoryInitializer
 		String actualText="";
 		String emailErrorMessage="";
 		String passwordErrorMessage="";
-		
+
 		try
 		{
 			emailErrorMessage = usernameErrorMessageLocator.getText().trim();
 		}
 		catch(Exception e)
 		{ }
-		
+
 		try
 		{
 			passwordErrorMessage = passwordErrorMessageLocator.getText().trim();
 		}
 		catch(Exception e)
 		{ }
-		
+
 		actualText = emailErrorMessage + passwordErrorMessage;
 		Assert.assertEquals(actualText, errorMessage);
 		return this;
