@@ -24,7 +24,7 @@ public class ProductInformationPageObjects extends PageFactoryInitializer{
 	private WebElement checkoutLocator;
 
 
-	@Step("Click On the Item")
+	@Step("Click On Add to Bag")
 	public ProductInformationPageObjects addToBag() 
 	{
 		FluentWaiting.waitUntillElementToBeClickable(30, 520, addToBag);	

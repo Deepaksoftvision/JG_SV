@@ -44,7 +44,7 @@ public class DottiLandingPageObjects extends PageFactoryInitializer
 		return this;
 	}
 
-	@Step("Mouse Hover on New Arrivals")
+	@Step("Click On New Clothing")
 	public DottiLandingPageObjects clickOnNewClothing() 
 	{
 		FluentWaiting.waitUntillElementToBeClickable(30, 500, subMenu_NewClothing);
