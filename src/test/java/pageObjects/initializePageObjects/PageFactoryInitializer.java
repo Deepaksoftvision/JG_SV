@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import controllers.BaseMethod;
 import pageObjects.modules.DottiLandingPageObjects;
 import pageObjects.modules.DottiLoginPageObjects;
+import pageObjects.modules.OrderConfirmationPageObjects;
 import pageObjects.modules.ProductInformationPageObjects;
 import pageObjects.modules.ProductListPageObjects;
 import pageObjects.modules.SecuredPaymentPageObject;
@@ -43,5 +44,9 @@ public class PageFactoryInitializer extends BaseMethod
 	
 	public SecuredPaymentPageObject securedPaymentPage(){
 		return PageFactory.initElements(getWebDriver(), SecuredPaymentPageObject.class);
+	}
+	
+	public OrderConfirmationPageObjects orderConfirmationPage(){
+		return PageFactory.initElements(getWebDriver(), OrderConfirmationPageObjects.class);
 	}
 }

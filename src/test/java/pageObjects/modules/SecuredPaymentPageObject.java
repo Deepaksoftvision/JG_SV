@@ -51,7 +51,7 @@ public class SecuredPaymentPageObject extends PageFactoryInitializer {
 	
 	
 	@Step("Click On the Secured Payment")
-	public SecuredPaymentPageObject clickOnSecuredpage() 
+	public SecuredPaymentPageObject clickOnSecuredPayment() 
 	{		
 		FluentWaiting.waitUntillElementToBeVisible(30, 10, securedPaymentLocator);
 		securedPaymentLocator.click();

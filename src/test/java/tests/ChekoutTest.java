@@ -42,7 +42,10 @@ public class ChekoutTest extends PageFactoryInitializer
 		.shoppingBagPage()
 		.clickOnCheckout()
 		.securedPaymentPage()
+		.clickOnSecuredPayment()
 		.enterCreditCardDetails(data.getCardNo(),data.getCCMonth(),data.getCCYear(),data.getCCCVV())
-		.clickOnPlaceOrder();
+		.clickOnPlaceOrder()
+		.orderConfirmationPage()
+		.verifyOrderStatus();
 	}
 }
