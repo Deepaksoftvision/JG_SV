@@ -40,6 +40,7 @@ public class PageFactoryInitializer extends BaseMethod
 	public ShoppingBagPageObjects shoppingBagPage(){
 		return PageFactory.initElements(getWebDriver(), ShoppingBagPageObjects.class);
 	}
+	
 	public SecuredPaymentPageObject securedPaymentPage(){
 		return PageFactory.initElements(getWebDriver(), SecuredPaymentPageObject.class);
 	}
