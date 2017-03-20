@@ -26,8 +26,4 @@ public class ShoppingBagPageObjects extends PageFactoryInitializer
 		checkoutLocator.click();
 		return this;
 	}
-
-
-	
-
 }

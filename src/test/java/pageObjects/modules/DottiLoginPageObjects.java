@@ -39,6 +39,8 @@ public class DottiLoginPageObjects extends PageFactoryInitializer
 	@FindBy(id="do-error")
 	private WebElement errorHeaderLocator;
 
+	@FindBy(id="do-forgot-password-link")
+	private WebElement forgotPasswordLocator;
 
 
 
