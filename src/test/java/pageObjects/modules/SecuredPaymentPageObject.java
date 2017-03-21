@@ -86,7 +86,4 @@ public class SecuredPaymentPageObject extends PageFactoryInitializer {
 		button_PlaceOrder.click();
 		return this;
 	}
-
-
-
 }

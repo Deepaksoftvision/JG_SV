@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import controllers.BaseMethod;
 import pageObjects.modules.DottiLandingPageObjects;
 import pageObjects.modules.DottiLoginPageObjects;
+import pageObjects.modules.MyAccountPageObjects;
 import pageObjects.modules.OrderConfirmationPageObjects;
 import pageObjects.modules.ProductInformationPageObjects;
 import pageObjects.modules.ProductListPageObjects;
@@ -28,6 +29,10 @@ public class PageFactoryInitializer extends BaseMethod
 
 	public DottiLoginPageObjects loginPage() {
 		return PageFactory.initElements(getWebDriver(), DottiLoginPageObjects.class);
+	}
+	
+	public MyAccountPageObjects myAccountsPage() {
+		return PageFactory.initElements(getWebDriver(), MyAccountPageObjects.class);
 	}
 
 	public ProductListPageObjects productListPage() {
