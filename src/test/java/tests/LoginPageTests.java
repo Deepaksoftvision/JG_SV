@@ -40,7 +40,7 @@ public class LoginPageTests extends PageFactoryInitializer
 	public void loginTest_Positive() throws Exception
 	{
 		login(data.getUsername(),data.getPassword());
-		loginPage()
+		myAccountsPage()
 		.verifyPageTitleAfterLogin()
 		.verifyLoginSuccessMessage();		
 	}

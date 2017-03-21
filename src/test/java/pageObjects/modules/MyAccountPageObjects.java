@@ -38,8 +38,16 @@ public class MyAccountPageObjects extends PageFactoryInitializer
 	@FindBy(xpath="//h3[@class='do-breadcrumb']")
 	private WebElement breadcrumb_MyAccount;
 	
-	@Step("verify My Account Page Header")
-	public MyAccountPageObjects verifyMyAccountPageHeader() throws Exception
+	@Step("verify MyAccount page title")
+	public MyAccountPageObjects verifyPageTitleAfterLogin() throws Exception 
+	{
+		Thread.sleep(5000);
+		Assert.assertEquals(getWebDriver().getTitle().trim(), "My Account • Dotti");
+		return this;
+	}
+	
+	@Step("verify login Success Message")
+	public MyAccountPageObjects verifyLoginSuccessMessage() throws Exception
 	{
 		FluentWaiting.waitUntillElementToBeVisible(60, 500, header_MyAccountPage);
 		Assert.assertTrue(header_MyAccountPage.isDisplayed());

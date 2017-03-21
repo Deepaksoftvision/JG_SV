@@ -28,7 +28,7 @@ public class ChekoutTest extends PageFactoryInitializer
 	public void Checkout_Positive() throws Exception
 	{
 		loginTestPage.login(data.getUsername(),data.getPassword());
-		loginPage()
+		myAccountsPage()
 		.verifyPageTitleAfterLogin()
 		.verifyLoginSuccessMessage()
 		.landingPage()

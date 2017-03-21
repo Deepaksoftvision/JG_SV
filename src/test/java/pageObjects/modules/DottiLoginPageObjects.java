@@ -78,24 +78,6 @@ public class DottiLoginPageObjects extends PageFactoryInitializer
 		return this;
 	}
 
-	@Step("Verify Login Success Message")
-	public DottiLoginPageObjects verifyLoginSuccessMessage() throws Exception 
-	{
-		FluentWaiting.waitUntillElementToBeVisible(30, 10, accountHomeLocator);
-		Assert.assertTrue(accountHomeLocator.isDisplayed());
-		return this;
-	}
-
-
-	@Step("Verify the page title")
-	public DottiLoginPageObjects verifyPageTitleAfterLogin() throws Exception 
-	{
-		Thread.sleep(5000);
-		Assert.assertEquals(getWebDriver().getTitle().trim(), "My Account • Dotti");
-		return this;
-	}
-
-
 	@Step("Verify the Error Message: {0}")
 	public DottiLoginPageObjects verifyLoginErrorsMessage(String errorMessage)
 	{
