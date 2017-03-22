@@ -36,7 +36,7 @@ public class ChekoutTest extends PageFactoryInitializer
 		.clickOnNewClothing()
 		.productListPage()
 		.clickOnFirstItem()
-		.productInformationPage()
+		.productDescriptionPage()
 		.addToBag()
 		.clickOncheckoutInHeader()
 		.shoppingBagPage()

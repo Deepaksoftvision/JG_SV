@@ -1,6 +1,3 @@
-/**
- * 
- */
 package pageObjects.modules;
 
 import org.openqa.selenium.WebElement;
@@ -51,6 +48,4 @@ public class DottiLandingPageObjects extends PageFactoryInitializer
 		subMenu_NewClothing.click();
 		return this;
 	}
-	
-	
 }

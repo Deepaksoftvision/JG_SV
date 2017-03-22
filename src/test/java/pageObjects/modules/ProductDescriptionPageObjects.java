@@ -14,7 +14,7 @@ import utils.FluentWaiting;
  * @author spi.qa5
  *
  */
-public class ProductInformationPageObjects extends PageFactoryInitializer{
+public class ProductDescriptionPageObjects extends PageFactoryInitializer{
 
 	@FindBy(xpath="//input[@id='do-addtobag']")
 	private WebElement addToBag;
@@ -25,7 +25,7 @@ public class ProductInformationPageObjects extends PageFactoryInitializer{
 
 
 	@Step("Click On Add to Bag")
-	public ProductInformationPageObjects addToBag() 
+	public ProductDescriptionPageObjects addToBag() 
 	{
 		FluentWaiting.waitUntillElementToBeClickable(30, 520, addToBag);	
 		addToBag.click();
@@ -33,7 +33,7 @@ public class ProductInformationPageObjects extends PageFactoryInitializer{
 	}
 
 	@Step("Checkout")
-	public ProductInformationPageObjects clickOncheckoutInHeader() {
+	public ProductDescriptionPageObjects clickOncheckoutInHeader() {
 		FluentWaiting.waitUntillElementToBeClickable(30, 500, checkoutLocator);
 		checkoutLocator.click();		
 		return this;
