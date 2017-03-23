@@ -1,5 +1,6 @@
 /**
- * 
+ * @author Gladson Antony
+ * @date 21-Mar-2017
  */
 package pageObjects.modules;
 
@@ -11,10 +12,6 @@ import pageObjects.initializePageObjects.PageFactoryInitializer;
 import ru.yandex.qatools.allure.annotations.Step;
 import utils.FluentWaiting;
 
-/**
- * @author spi.qa5
- *
- */
 public class OrderConfirmationPageObjects extends PageFactoryInitializer
 {
 

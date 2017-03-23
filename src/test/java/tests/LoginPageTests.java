@@ -13,10 +13,6 @@ import ru.yandex.qatools.allure.annotations.Features;
 import ru.yandex.qatools.allure.annotations.Parameter;
 import ru.yandex.qatools.allure.annotations.TestCaseId;
 
-/**
- * @author spi.qa5
- *
- */
 public class LoginPageTests extends PageFactoryInitializer 
 {
 
@@ -24,7 +20,7 @@ public class LoginPageTests extends PageFactoryInitializer
 	
 	public void login(String username, String password) throws Exception
 	{
-		landingPage()
+		pageHeaders()
 		.clickOnLoginButton()
 		.loginPage()
 		.verifyPageTitle()

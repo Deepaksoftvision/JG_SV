@@ -4,7 +4,7 @@
 	<groupId>com.spi</groupId>
 	<artifactId>JustGroups_New</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>WebAutomation_Parallel</name>
+	<name>WebAutomation_Parallel_Glady</name>
 	<description>This is a Selenium Hybrid Project with Allure Reporting Tool</description>
 
 	<!-- To Ask Maven complier to Use JDK 1.8 -->

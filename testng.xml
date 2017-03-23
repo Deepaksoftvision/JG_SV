@@ -10,9 +10,9 @@
 		<parameter name="browser" value="Chrome"></parameter>
 		<parameter name="url" value="http://test.dotti.co.nz/shop/en/dottinz"></parameter>
 		<classes>
-			<class name="tests.ChekoutTest">
+			<class name="tests.LoginPageTests">
 				<methods>
-					<include name="Checkout_Positive"></include>
+					<include name="loginTest_Positive"></include>
 				</methods>
 			</class>
 		</classes>
