@@ -11,10 +11,10 @@
 		<parameter name="url" value="http://test.dotti.co.nz/shop/en/dottinz"></parameter>
 		<classes>
 			<class name="tests.LandingPageTests">
-<!-- 				<methods>
+				<methods>
 					<include name="verifyJacketsSubMenus"></include>
-				</methods> -->
+				</methods>
 			</class>
 		</classes>
-		</test>
+	</test>
 </suite> <!-- Suite -->

@@ -401,6 +401,7 @@ public class BaseMethod extends WebDriverFactory
 		}
 	}
 
+	
 	/*To do
 	 * 1. Open Links in New Tab
 	 * 2. Switch to New Tab
@@ -426,6 +427,7 @@ public class BaseMethod extends WebDriverFactory
 		}
 	}
 	
+	
 	/*To do
 	 * 1. Mouse Hover on WebElement
 	 * 2. Open Links in New Tab
@@ -433,7 +435,8 @@ public class BaseMethod extends WebDriverFactory
 	 * 4. Print Page Title 
 	 * 5. Close New Tab 
 	 * 6. Switch to Old Tab*/
-	public void verifyMultiplePagesOnMouseHover(WebElement mouseHoverElement, List<WebElement> elementList) throws Exception
+	public void verifyMultiplePagesOnMouseHover(WebElement mouseHoverElement, List<WebElement> elementList) 
+			throws Exception
 	{
 		mousehover(mouseHoverElement);
 		String selectLinkOpeninNewTab = Keys.chord(Keys.CONTROL,Keys.RETURN); 
@@ -452,5 +455,4 @@ public class BaseMethod extends WebDriverFactory
 		    getWebDriver().switchTo().window(tabs.get(0));
 		}
 	}
-
 }
