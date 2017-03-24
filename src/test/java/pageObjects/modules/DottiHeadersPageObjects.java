@@ -168,7 +168,7 @@ public class DottiHeadersPageObjects extends PageFactoryInitializer
 		return this;
 	}
 
-	@Step("choose County {0} ")
+	@Step("choose County {0}")
 	public DottiHeadersPageObjects chooseCountry(String Country) throws Exception
 	{
 		FluentWaiting.waitUntillElementToBeClickable(30, 500, countryChooser);
@@ -185,7 +185,7 @@ public class DottiHeadersPageObjects extends PageFactoryInitializer
 		return this;
 	}
 
-	@Step("choose Australia ")
+	@Step("choose Australia")
 	public DottiHeadersPageObjects chooseCountryAustralia() throws Exception
 	{
 		FluentWaiting.waitUntillElementToBeClickable(30, 500, country_AUS);
@@ -194,7 +194,7 @@ public class DottiHeadersPageObjects extends PageFactoryInitializer
 		return this;
 	}
 	
-	@Step("choose New Zealand ")
+	@Step("choose New Zealand")
 	public DottiHeadersPageObjects chooseCountryNewZealand() throws Exception
 	{
 		FluentWaiting.waitUntillElementToBeClickable(30, 500, country_NZ);
@@ -207,8 +207,25 @@ public class DottiHeadersPageObjects extends PageFactoryInitializer
 	public DottiHeadersPageObjects searchFor(String searchText) throws Exception
 	{
 		FluentWaiting.waitUntillElementToBeClickable(30, 500, searchBoxLocator);
+		searchBoxLocator.clear();
 		searchBoxLocator.sendKeys(searchText);
 		hitEnter();
+		return this;
+	}
+
+	@Step("Verify New Arrivals Links with Titles")
+	public DottiHeadersPageObjects verifyNewArrivalsLinksWithTitles() throws Exception 
+	{
+		FluentWaiting.waitUntillElementToBeVisible(30, 500, menu_NewArrivals);
+		verifyMultiplePagesOnMouseHover(menu_NewArrivals, newArrivals_SubMenu);
+		return this;
+	}
+
+	@Step("Verify latest Offers Links with Titles")
+	public DottiHeadersPageObjects verifyLatestOffersLinksWithTitles() throws Exception 
+	{
+		FluentWaiting.waitUntillElementToBeVisible(30, 500, menu_LatestOffers);
+		verifyMultiplePagesOnMouseHover(menu_LatestOffers, latestOffers_SubMenu);
 		return this;
 	}
 

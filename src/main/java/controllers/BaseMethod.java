@@ -12,13 +12,16 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.imageio.ImageIO;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 
 import utils.EnvironmentSetup;
@@ -398,5 +401,60 @@ public class BaseMethod extends WebDriverFactory
 		}
 	}
 
+	/*To do
+	 * 1. Open Links in New Tab
+	 * 2. Switch to New Tab
+	 * 3. Print Page Title 
+	 * 4. Close New Tab 
+	 * 5. Switch to Old Tab*/
+	public void verifyMultiplePages(List<WebElement> elementList) throws Exception
+	{
+		String selectLinkOpeninNewTab = Keys.chord(Keys.CONTROL,Keys.RETURN); 
+		for(int i=0; i< elementList.size();i++)
+		{
+			Reporter.log(elementList.get(i).getText());
+			Thread.sleep(2000);
+			elementList.get(i).sendKeys(selectLinkOpeninNewTab);
+			ArrayList<String> tabs = new ArrayList<String> (getWebDriver().getWindowHandles());
+			Thread.sleep(2000);
+			getWebDriver().switchTo().window(tabs.get(1));
+			Reporter.log(getWebDriver().getTitle());
+			System.out.println(getWebDriver().getTitle());
+			getWebDriver().close();
+		    Thread.sleep(2000);
+		    getWebDriver().switchTo().window(tabs.get(0));
+		}
+	}
+	
+	/*To do
+	 * 1. Mouse Hover on WebElement
+	 * 2. Open Links in New Tab
+	 * 3. Switch to New Tab
+	 * 4. Print Page Title 
+	 * 5. Close New Tab 
+	 * 6. Switch to Old Tab*/
+	public void verifyMultiplePagesOnMouseHover(WebElement mouseHoverElement, List<WebElement> elementList) throws Exception
+	{
+		mousehover(mouseHoverElement);
+		for(WebElement we : elementList)
+		{
+			System.out.println(we.getText());
+		}
+		String selectLinkOpeninNewTab = Keys.chord(Keys.CONTROL,Keys.RETURN); 
+		for(int i=0; i< elementList.size();i++)
+		{
+			Reporter.log(elementList.get(i).getText());
+			Thread.sleep(2000);
+			elementList.get(i).sendKeys(selectLinkOpeninNewTab);
+			ArrayList<String> tabs = new ArrayList<String> (getWebDriver().getWindowHandles());
+			Thread.sleep(2000);
+			getWebDriver().switchTo().window(tabs.get(1));
+			Reporter.log(getWebDriver().getTitle());
+			System.out.println(getWebDriver().getTitle());
+			getWebDriver().close();
+		    Thread.sleep(2000);
+		    getWebDriver().switchTo().window(tabs.get(0));
+		}
+	}
 
 }
