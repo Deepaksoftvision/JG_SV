@@ -436,10 +436,6 @@ public class BaseMethod extends WebDriverFactory
 	public void verifyMultiplePagesOnMouseHover(WebElement mouseHoverElement, List<WebElement> elementList) throws Exception
 	{
 		mousehover(mouseHoverElement);
-		for(WebElement we : elementList)
-		{
-			System.out.println(we.getText());
-		}
 		String selectLinkOpeninNewTab = Keys.chord(Keys.CONTROL,Keys.RETURN); 
 		for(int i=0; i< elementList.size();i++)
 		{

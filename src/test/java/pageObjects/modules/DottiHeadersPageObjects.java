@@ -193,7 +193,7 @@ public class DottiHeadersPageObjects extends PageFactoryInitializer
 		Thread.sleep(2000);
 		return this;
 	}
-	
+
 	@Step("choose New Zealand")
 	public DottiHeadersPageObjects chooseCountryNewZealand() throws Exception
 	{
@@ -202,7 +202,7 @@ public class DottiHeadersPageObjects extends PageFactoryInitializer
 		Thread.sleep(2000);
 		return this;
 	}
-	
+
 	@Step("Search for: {0}")
 	public DottiHeadersPageObjects searchFor(String searchText) throws Exception
 	{
@@ -229,4 +229,59 @@ public class DottiHeadersPageObjects extends PageFactoryInitializer
 		return this;
 	}
 
+	@Step("Verify Tops Links with Titles")
+	public DottiHeadersPageObjects verifyTopsLinksWithTitles() throws Exception
+	{
+		FluentWaiting.waitUntillElementToBeVisible(30, 500, menu_Tops);
+		verifyMultiplePagesOnMouseHover(menu_Tops, tops_SubMenu);
+		return this;
+	}
+
+	@Step("Verify Dresses Links with Titles")
+	public DottiHeadersPageObjects verifyDressesLinksWithTitles() throws Exception
+	{
+		FluentWaiting.waitUntillElementToBeVisible(30, 500, menu_Dresses);
+		verifyMultiplePagesOnMouseHover(menu_Dresses, dresses_SubMenu);
+		return this;
+	}
+
+	@Step("Verify Jackets Links with Titles")
+	public DottiHeadersPageObjects verifyJacketsLinksWithTitles() throws Exception 
+	{
+		FluentWaiting.waitUntillElementToBeVisible(30, 500, menu_Jackets);
+		verifyMultiplePagesOnMouseHover(menu_Jackets, jackets_SubMenu);
+		return this;
+	}
+
+	@Step("Verify Bottoms Links with Titles")
+	public DottiHeadersPageObjects verifyBottomsLinksWithTitles() throws Exception
+	{
+		FluentWaiting.waitUntillElementToBeVisible(30, 500, menu_Bottoms);
+		verifyMultiplePagesOnMouseHover(menu_Bottoms, bottoms_SubMenu);
+		return this;
+	}
+
+	@Step("Verify Denim Links with Titles")
+	public DottiHeadersPageObjects verifyDenimLinksWithTitles() throws Exception
+	{
+		FluentWaiting.waitUntillElementToBeVisible(30, 500, menu_Denim);
+		verifyMultiplePagesOnMouseHover(menu_Denim, denim_SubMenu);
+		return this;
+	}
+
+	@Step("Verify Denim Links with Titles")
+	public DottiHeadersPageObjects verifyShoes_AccessoriesLinksWithTitles() throws Exception
+	{
+		FluentWaiting.waitUntillElementToBeVisible(30, 500, menu_ShoesAndAccessories);
+		verifyMultiplePagesOnMouseHover(menu_ShoesAndAccessories, shoesAndAccessories_SubMenu);
+		return this;
+	}
+
+	@Step("Verify Denim Links with Titles")
+	public DottiHeadersPageObjects verifySaleLinksWithTitles() throws Exception 
+	{
+		FluentWaiting.waitUntillElementToBeVisible(30, 500, menu_Sale);
+		verifyMultiplePagesOnMouseHover(menu_Sale, sale_SubMenu);
+		return this;
+	}
 }
